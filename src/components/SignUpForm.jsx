@@ -87,8 +87,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100vw;
+
     .form-ct {
       width: 32.7rem;
       height: 44.2rem;

@@ -30,9 +30,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8.8rem;
+}
+@media (min-width: 48em) {
+}
+@media (min-width: 90em) {
+  .App {
+    flex-direction: row;
+  }
 }
