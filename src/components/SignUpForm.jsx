@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, VStack } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import TextField from "./TextField";
+import schema from "./ValidationSchema";
 const SignUpForm = () => {
   const [errorM, setErrorM] = useState(null);
   return (
@@ -12,8 +13,8 @@ const SignUpForm = () => {
           lastName: "",
           email: "",
           password: "",
-          confirmPassword: "",
         }}
+        validationSchema={schema}
         onSubmit={(values, actions) => {
           const vals = { ...values };
           actions.resetForm();
@@ -52,7 +53,7 @@ const SignUpForm = () => {
             type="text"
           />
           <TextField
-            name="LastName"
+            name="lastName"
             placeholder="Last Name"
             autoComplete="off"
             type="text"
