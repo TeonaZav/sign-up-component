@@ -23,13 +23,9 @@ Users should be able to:
   - Any `input` field is empty. The message for this error should say _"[Field Name] cannot be empty"_
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say _"Looks like this is not an email"_
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ---
 
-## Screenshot (Fullscreen)
+### Screenshot
 
 - 375px, 1440px:
 
