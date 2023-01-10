@@ -45,7 +45,11 @@ code {
   padding-top: 8.8rem;
   padding-bottom: 6.4rem;
 }
-
+.App div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
 @media (min-width: 90em) {
   .App {
     flex-direction: row;
