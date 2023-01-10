@@ -56,4 +56,4 @@ npm start
 
 ### Links
 
-- Live Site URL: [https://teonazav.github.io/sign-up-component/#/]()
+- Live Site URL: https://teonazav.github.io/sign-up-component/#/
