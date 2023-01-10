@@ -77,7 +77,7 @@ const SignUpForm = () => {
               Claim your free trial
             </Button>
             <p className="terms-warning">
-              By clicking the button, you are agreeing to our
+              By clicking the button, you are agreeing to our{" "}
               <NavLink className="terms" to="/terms">
                 Terms and Servicess
               </NavLink>
@@ -128,13 +128,15 @@ const Wrapper = styled.div`
     }
     .terms-warning {
       font-weight: 500;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       line-height: 2.6rem;
       text-align: center;
       color: #bab7d4;
     }
     .terms {
+      text-decoration: none;
       color: #ff7979;
+      font-weight: 700;
     }
   }
 
