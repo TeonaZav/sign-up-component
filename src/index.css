@@ -37,17 +37,19 @@ code {
 }
 .App {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 8.8rem;
+  padding-bottom: 6.4rem;
 }
-@media (min-width: 48em) {
-}
+
 @media (min-width: 90em) {
   .App {
     flex-direction: row;
+    gap: 4.5rem;
+    padding: 12.1rem 16.5rem;
   }
 }

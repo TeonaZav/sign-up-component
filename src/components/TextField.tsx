@@ -16,7 +16,28 @@ const TextField = ({ label, ...props }: TextFieldProps) => {
         isInvalid={Boolean(meta.touched && meta.error)}
         className="text-ct"
       >
-        <Input as={Field} {...field} {...props} className="text-field" />
+        <Input
+          as={Field}
+          {...field}
+          {...props}
+          className={`text-field  ${
+            meta.touched && meta.error && "is-invalid"
+          }`}
+        />
+        {meta.touched && meta.error && (
+          <svg
+            className="error-icon"
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" fillRule="evenodd">
+              <circle fill="#FF7979" cx="12" cy="12" r="12" />
+              <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+              <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+            </g>
+          </svg>
+        )}
         <FormErrorMessage className="error">{meta.error}</FormErrorMessage>
       </FormControl>
     </Wrapper>
@@ -25,9 +46,11 @@ const TextField = ({ label, ...props }: TextFieldProps) => {
 
 const Wrapper = styled.div`
   .text-ct {
+    display: flex;
+    flex-direction: column;
     position: relative;
     .text-field {
-      width: 27.9rem;
+      width: 24.5rem;
       height: 5.6rem;
       background: #ffffff;
       border: 0.1rem solid #dedede;
@@ -40,7 +63,7 @@ const Wrapper = styled.div`
       padding-right: 1.5rem;
       caret-color: #5e54a4;
       border-radius: 0.5rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.4rem;
       &:focus {
         border: 0.1rem solid #5e54a4;
         outline: none;
@@ -53,22 +76,30 @@ const Wrapper = styled.div`
       font-size: 1.1rem;
       font-weight: 500;
       line-height: 1.6rem;
-      color: #ac0e0e;
+      color: #ff7979;
+      margin-top: -0.3rem;
+      margin-bottom: 1.1rem;
+      text-align: right;
+      align-self: flex-end;
+    }
+    .is-invalid {
+      border: 1px solid #ff7979;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 2rem;
+    }
+    .error-icon {
       position: absolute;
-      right: 0;
-      bottom: -0.3rem;
+      right: 1rem;
+      top: 1.5rem;
     }
   }
-  @media (min-width: 48em) {
-    .text-ct {
-      .text-field {
-      }
-    }
-  }
+
   @media (min-width: 90em) {
     .text-ct {
       .text-field {
-        width: 46rem;
+        width: 42.6rem;
+        margin-bottom: 2rem;
       }
     }
   }

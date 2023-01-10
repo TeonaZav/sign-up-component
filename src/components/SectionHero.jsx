@@ -48,6 +48,10 @@ const Wrapper = styled.section`
         font-size: 5rem;
         line-height: 5.5rem;
         letter-spacing: -0.52px;
+        text-align: left;
+      }
+      p {
+        text-align: left;
       }
     }
   }

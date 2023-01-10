@@ -87,10 +87,9 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    width: 32.7rem;
+    height: 44.2rem;
     .form-ct {
-      width: 32.7rem;
-      height: 44.2rem;
       border-radius: 1rem;
       background-color: #ffffff;
       box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
@@ -122,17 +121,12 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (min-width: 48em) {
-    .form-main-ct {
-      .form-ct {
-      }
-    }
-  }
   @media (min-width: 90em) {
     .form-main-ct {
+      width: 54rem;
+      height: 47.4rem;
       .form-ct {
-        width: 54rem;
-        height: 47.4rem;
+        padding: 4rem;
         .btn-sign-up {
           width: 46rem;
         }
