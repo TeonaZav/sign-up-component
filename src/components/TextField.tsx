@@ -2,11 +2,14 @@ import { FormControl, FormErrorMessage } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
 import { Field, useField } from "formik";
 import styled from "styled-components";
+
 type TextFieldProps = {
   name: string;
-  label: string;
-  type?: "InputType";
-  className?: string;
+  label?: string;
+  placeholder?: string;
+  autoComplete: string;
+  type?: any;
+  value?: string;
 };
 const TextField = ({ label, ...props }: TextFieldProps) => {
   const [field, meta] = useField(props);
@@ -14,7 +17,7 @@ const TextField = ({ label, ...props }: TextFieldProps) => {
     <Wrapper>
       <FormControl
         isInvalid={Boolean(meta.touched && meta.error)}
-        className="text-ct"
+        className={`text-ct ${meta.touched && meta.error && "top-margin"}`}
       >
         <Input
           as={Field}
@@ -49,6 +52,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 0;
     .text-field {
       width: 24.5rem;
       height: 5.6rem;
@@ -63,7 +67,7 @@ const Wrapper = styled.div`
       padding-right: 1.5rem;
       caret-color: #5e54a4;
       border-radius: 0.5rem;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1rem;
       &:focus {
         border: 0.1rem solid #5e54a4;
         outline: none;
@@ -77,10 +81,10 @@ const Wrapper = styled.div`
       font-weight: 500;
       line-height: 1.6rem;
       color: #ff7979;
-      margin-top: -0.3rem;
       margin-bottom: 1.1rem;
       text-align: right;
       align-self: flex-end;
+      margin-top: -1rem;
     }
     .is-invalid {
       border: 1px solid #ff7979;
@@ -100,6 +104,9 @@ const Wrapper = styled.div`
       .text-field {
         width: 42.6rem;
         margin-bottom: 2rem;
+      }
+      .error {
+        margin-top: -2rem;
       }
     }
   }
