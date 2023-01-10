@@ -89,9 +89,15 @@ const Wrapper = styled.div`
       rgb(238, 238, 238) 0%,
       rgb(227, 231, 235) 100%
     );
-    padding: 6.5rem;
+    padding: 3.2rem;
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 4rem;
+      margin-top: 6.4rem;
+    }
     p {
       color: #7a7a7a;
+      margin-bottom: 2.4rem;
     }
   }
   .back-home {
@@ -100,7 +106,7 @@ const Wrapper = styled.div`
     height: 3.6rem;
     font-size: 1.8rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     vertical-align: middle;
     color: #ffffff;
@@ -109,7 +115,7 @@ const Wrapper = styled.div`
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
     border-radius: 0.5rem;
     border: none;
-    padding-top: 1rem;
+    padding: 1rem 2rem;
     &:hover {
       color: #ffffff;
       background-color: #77e2b3;
@@ -118,6 +124,11 @@ const Wrapper = styled.div`
       outline: none;
       border-radius: 0.6rem;
       text-align: center;
+    }
+  }
+  @media (min-width: 90em) {
+    .terms-conditions {
+      padding: 24rem;
     }
   }
 `;

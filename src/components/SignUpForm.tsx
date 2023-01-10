@@ -95,13 +95,15 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 32.7rem;
-    height: 44.2rem;
+    min-height: 44.2rem;
+    resize: horizontal;
+
     .form-ct {
       border-radius: 1rem;
       background-color: #ffffff;
       box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
       padding: 2.4rem;
-
+      overflow: auto;
       .btn-sign-up {
         width: 100%;
         height: 5.6rem;
@@ -143,7 +145,7 @@ const Wrapper = styled.div`
   @media (min-width: 90em) {
     .form-main-ct {
       width: 54rem;
-      height: 47.4rem;
+      min-height: 47.4rem;
       .form-ct {
         padding: 4rem;
         .btn-sign-up {

@@ -38,16 +38,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.App {
+.Terms {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-y: scroll;
+}
+.Home {
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6.4rem 0;
+  padding: 8.8rem 0;
 }
-.App div {
+.Home div {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -59,13 +64,19 @@ code {
     height: 100vh;
     overflow: hidden;
   }
-  .App {
+  .Home {
     flex-direction: row;
     gap: 4.5rem;
+    padding: 12.1rem 0 5rem 0;
   }
-  .App div {
+  .Home div {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+  }
+  .Terms {
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-y: scroll;
   }
 }

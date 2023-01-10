@@ -1,7 +1,7 @@
 import TermsServices from "../components/TermsServicess";
 function Terms() {
   return (
-    <div className="App">
+    <div className="Terms">
       <div>
         <TermsServices />
       </div>
