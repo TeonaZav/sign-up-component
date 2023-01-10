@@ -41,6 +41,9 @@ Users should be able to:
 - react-router-dom
 - TypeScript
 - styled-components
+- Formik
+- Chakra UI
+- Yup
 
 ## Installing 🔍
 
