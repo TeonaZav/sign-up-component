@@ -4,7 +4,7 @@ import { Form, Formik } from "formik";
 import TextField from "./TextField";
 import schema from "./ValidationSchema";
 import styled from "styled-components";
-
+import { NavLink } from "react-router-dom";
 const SignUpForm = () => {
   const [errorM, setErrorM] = useState(null);
   return (
@@ -76,6 +76,12 @@ const SignUpForm = () => {
             <Button colorScheme="teal" type="submit" className="btn-sign-up">
               Claim your free trial
             </Button>
+            <p className="terms-warning">
+              By clicking the button, you are agreeing to our
+              <NavLink className="terms" to="/terms">
+                Terms and Servicess
+              </NavLink>
+            </p>
           </VStack>
         </Formik>
       </div>
@@ -119,6 +125,16 @@ const Wrapper = styled.div`
           margin-bottom: 0.01rem;
         }
       }
+    }
+    .terms-warning {
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 2.6rem;
+      text-align: center;
+      color: #bab7d4;
+    }
+    .terms {
+      color: #ff7979;
     }
   }
 
